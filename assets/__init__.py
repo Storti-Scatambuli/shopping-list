@@ -19,13 +19,15 @@ def menu(titulo_texto, opcoes=[]):
                 break
             else:
                 print('Digite um valor dentro do intervalo das opções')
+    return decisao
 
 def mostraItens(itens_dicionario):
     for item in itens_dicionario:
         print(f'{item:.<20}{itens_dicionario[item]}')
         
 def atualizarItem(itens_dicionario):
-    print('Digite o nome do produto seguido por : e logo insira o valor que queira adicionar. Não se preocupe caso o item não esteja sendo exibido, digite o nome e ele será criado.\nDigite sair para voltar ao menu anterior e salvar as alterações.')
+    print('Digite o nome do produto seguido por : e logo insira o valor que queira adicionar.\nNão se preocupe caso o item não esteja sendo exibido, digite o nome e ele será criado.\nDigite sair para voltar ao menu anterior e salvar as alterações.')
+    print()
     itens_copia = itens_dicionario
     while True:
         mostraItens(itens_copia)
